@@ -1,0 +1,34 @@
+# GitHub Actions workflow for .NET build, test, and compliance
+name: 🔨 .NET Build and Compliance
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: ⚙️ Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "6.0.x"
+
+      - name: 📦 Restore dependencies
+        run: dotnet restore jmespath.net.sln
+
+      - name: 🔨 Build
+        run: dotnet build jmespath.net.sln --configuration Release --no-restore
+
+      - name: 🧪 Run Unit Tests
+        run: dotnet test tests/jmespathnet.tests/jmespathnet.tests.csproj --no-build --verbosity normal
+
+      - name: ✅ Run Compliance Tests
+        run: dotnet run --project tools/jmespathnet.compliance/jpnet.csproj --no-build
