@@ -25,10 +25,10 @@ jobs:
         run: dotnet restore jmespath.net.sln
 
       - name: 🔨 Build
-        run: dotnet build jmespath.net.sln --configuration Release --no-restore
+        run: dotnet build jmespath.net.sln --configuration Debug --no-restore
 
       - name: 🧪 Run Unit Tests
         run: dotnet test tests/jmespathnet.tests/jmespathnet.tests.csproj --no-build --verbosity normal
 
       - name: ✅ Run Compliance Tests
-        run: dotnet run --project tools/jmespathnet.compliance/jpnet.csproj --no-build
+        run: dotnet run --project tools/jmespathnet.compliance/jmespathnet.compliance.csproj --no-build -t tools/jmespathnet.compliance/jmespath.test/tests/

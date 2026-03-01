@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp3.1;net452;net6.0</TargetFrameworks>
+    <TargetFrameworks>net452;net6.0</TargetFrameworks>
     <AssemblyName>jmespathnet.tests</AssemblyName>
     <PackageId>jmespathnet.tests</PackageId>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
@@ -17,7 +17,7 @@
     <ProjectReference Include="..\..\src\jmespath.net.parser\jmespath.net.parser.csproj" />
     <ProjectReference Include="..\..\src\jmespath.net\jmespath.net.csproj" />
   </ItemGroup>
-  
+
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
     <ProjectReference Include="..\..\src\jmespath.net.parser\jmespath.net.parser.csproj" AdditionalProperties="TargetFramework=netstandard1.3"/>
     <ProjectReference Include="..\..\src\jmespath.net\jmespath.net.csproj" AdditionalProperties="TargetFramework=netstandard1.3"/>
