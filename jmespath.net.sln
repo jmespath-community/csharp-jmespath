@@ -1,11 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28315.86
+# Visual Studio Version 18
+VisualStudioVersion = 18.3.11520.95 d18.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{65D019ED-1B19-47DD-8C89-4FBABAA860D8}"
 	ProjectSection(SolutionItems) = preProject
-		appveyor.yml = appveyor.yml
 		global.json = global.json
 		README.md = README.md
 	EndProjectSection
@@ -22,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jmespathnet.compliance", "t
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jmespathnet.tests", "tests\jmespathnet.tests\jmespathnet.tests.csproj", "{43EC8A0D-27A8-476C-8806-ED18FCC8B2F2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JmesPath.net.parser", "src\jmespath.net.parser\jmespath.net.parser.csproj", "{A3301284-F70F-45E2-ABC9-A19D66A10712}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jmespath.net.parser", "src\jmespath.net.parser\jmespath.net.parser.csproj", "{A3301284-F70F-45E2-ABC9-A19D66A10712}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".config", ".config", "{7D92C6D8-FB53-48C0-80F4-9120675714CC}"
 	ProjectSection(SolutionItems) = preProject
@@ -32,6 +31,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jpnet", "tools\jpnet\jpnet.csproj", "{4F2BFBEA-D4D6-4064-9D9D-3881D5463152}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jmespath.net.interop", "src\jmespath.net.interop\jmespath.net.interop.csproj", "{887093C1-A2AD-45C7-9B79-9F496D02826F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Actions", "Actions", "{8D3D4399-AAB6-414E-9FE4-14A955FEFEE1}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\build.yaml = .github\workflows\build.yaml
+		.github\workflows\publish.yaml = .github\workflows\publish.yaml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -74,6 +79,7 @@ Global
 		{A3301284-F70F-45E2-ABC9-A19D66A10712} = {6D7773F3-76FA-4E25-A85C-7AA1AD5668D8}
 		{4F2BFBEA-D4D6-4064-9D9D-3881D5463152} = {CF8C1543-B634-47F5-BF43-4508F64E0554}
 		{887093C1-A2AD-45C7-9B79-9F496D02826F} = {6D7773F3-76FA-4E25-A85C-7AA1AD5668D8}
+		{8D3D4399-AAB6-414E-9FE4-14A955FEFEE1} = {65D019ED-1B19-47DD-8C89-4FBABAA860D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {759AACA1-7B3D-4EA9-AAC6-CA9150656A98}

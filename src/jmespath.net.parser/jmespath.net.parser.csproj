@@ -5,20 +5,21 @@
     <AssemblyTitle>JmesPath.Net.Parser</AssemblyTitle>
     <Authors>Jeremie Devillard;Maxime Labelle;Atif Aziz</Authors>
     <VersionPrefix>42.43.44</VersionPrefix>
-    <TargetFrameworks>netstandard2.1;netstandard1.3;net45</TargetFrameworks>
+    <TargetFrameworks>netstandard2.1;netstandard2.0;netstandard1.3;net45</TargetFrameworks>
     <AssemblyName>JmePath.Net.Parser</AssemblyName>
     <AssemblyOriginatorKeyFile>../jmespath.net.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
     <PackageId>JmesPath.Net.Parser</PackageId>
     <PackageTags>jmespath;json</PackageTags>
-    <PackageProjectUrl>https://github.com/jdevillard/JmesPath.Net</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/jmespath-community/csharp-jmespath</PackageProjectUrl>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
   </PropertyGroup>
+
   <ItemGroup>
     <YaccFile Include="JmesPathParser.y">
       <OutputFile>JmesPathParser.g.cs</OutputFile>
@@ -28,21 +29,22 @@
     </LexFile>
     <Compile Include="JmesPathScanner.g.cs" Condition="!Exists( 'JmesPathScanner.g.cs' )" />
     <Compile Include="JmesPathParser.g.cs" Condition="!Exists( 'JmesPathParser.g.cs' )" />
-	<Compile Include="GplexBuffers.cs" Condition="!Exists( 'GplexBuffers.cs' )" />
-	<Compile Include="ShiftReduceParserCode.cs" Condition="!Exists( 'ShiftReduceParserCode.cs' )" />
+    <Compile Include="GplexBuffers.cs" Condition="!Exists( 'GplexBuffers.cs' )" />
+    <Compile Include="ShiftReduceParserCode.cs" Condition="!Exists( 'ShiftReduceParserCode.cs' )" />
   </ItemGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\jmespath.net.interop\jmespath.net.interop.csproj" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
-	  <!-- Use GplexBuffers and ShiftReduceParserCode from the net13 folder instead, which are modified for use of netstandard 1.3 -->
-	  <Compile Remove="ShiftReduceParserCode.cs" />
-	  <Compile Remove="GplexBuffers.cs" />
-	  <PackageReference Include="System.Reflection.TypeExtensions" Version="4.7.0" />
+    <!-- Use GplexBuffers and ShiftReduceParserCode from the net13 folder instead, which are modified for use of netstandard 1.3 -->
+    <Compile Remove="ShiftReduceParserCode.cs" />
+    <Compile Remove="GplexBuffers.cs" />
+    <PackageReference Include="System.Reflection.TypeExtensions" Version="4.7.0" />
     <PackageReference Include="System.Runtime.Serialization.Formatters" Version="4.3.0" />
   </ItemGroup>
- 
+
   <ItemGroup>
     <PackageReference Include="YaccLexTools" Version="1.2.2" PrivateAssets="All" />
   </ItemGroup>
