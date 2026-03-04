@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net452;net6.0</TargetFrameworks>
+    <TargetFrameworks>net452;net8.0</TargetFrameworks>
     <AssemblyName>jmespathnet.tests</AssemblyName>
     <PackageId>jmespathnet.tests</PackageId>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
