@@ -2,7 +2,11 @@
 
 A fully compliant implementation of [JMESPath](http://jmespath.org/specification.html) for .NET.
 
+#### Build
 [![.NET Build and Compliance](https://github.com/jmespath-community/csharp-jmespath/actions/workflows/build.yaml/badge.svg)](https://github.com/jmespath-community/csharp-jmespath/actions/workflows/build.yaml)
+
+#### NuGet
+[![NuGet Badge](https://shields.io/nuget/v/JMESPath.Net)](https://www.nuget.org/packages/JMESPath.Net)
  
 # Getting started
 
