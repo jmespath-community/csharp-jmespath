@@ -1,8 +1,12 @@
 # JMESPath.Net
 
-A fully compliant implementation of [JMESPath](http://jmespath.org/specification.html) for .Net Core.
+A fully compliant implementation of [JMESPath](http://jmespath.org/specification.html) for .NET.
 
-[![Build status](https://ci.appveyor.com/api/projects/status/va3p48ufrj0pxl1t/branch/master?svg=true)](https://ci.appveyor.com/project/jdevillard/jmespath-net/branch/master)
+#### Build
+[![.NET Build and Compliance](https://github.com/jmespath-community/csharp-jmespath/actions/workflows/build.yaml/badge.svg)](https://github.com/jmespath-community/csharp-jmespath/actions/workflows/build.yaml)
+
+#### NuGet
+[![NuGet Badge](https://shields.io/nuget/v/JMESPath.Net)](https://www.nuget.org/packages/JMESPath.Net)
  
 # Getting started
 

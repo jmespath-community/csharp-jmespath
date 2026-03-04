@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <AssemblyName>jmespathnet.compliance</AssemblyName>
     <OutputType>Exe</OutputType>
     <PackageId>jmespathnet.compliance</PackageId>
@@ -12,10 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\jmespath.net\jmespath.net.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
 </Project>
