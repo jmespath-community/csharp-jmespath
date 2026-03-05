@@ -48,6 +48,7 @@ jobs:
           cp "src/jmespath.net.parser/JmesPath.Net.Parser.nuspec" $targetPath
           mkdir "$targetPath/lib" | Out-Null
           mv "$targetPath/netstandard1.3" "$targetPath/lib/netstandard1.3"
+          mv "$targetPath/netstandard2.0" "$targetPath/lib/netstandard2.0"
           mv "$targetPath/netstandard2.1" "$targetPath/lib/netstandard2.1"
           mv "$targetPath/net45" "$targetPath/lib/net45"
           cd $targetPath
