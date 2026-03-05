@@ -22,7 +22,7 @@ BEGIN {
     # Convert the Passphrase to UTF8 Bytes
     $pass_ = [Text.Encoding]::UTF8.GetBytes($Passphrase)
     # Convert the Salt to UTF Bytes
-    $salt = [Text.Encoding]::UTF8.GetBytes($salt)
+    $salt_ = [Text.Encoding]::UTF8.GetBytes($salt)
 
     # Create the Encryption Key using the passphrase, salt and SHA1 algorithm at 256 bits
     
