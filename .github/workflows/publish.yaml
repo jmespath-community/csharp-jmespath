@@ -25,9 +25,9 @@ jobs:
         run: bin/EncryptDecryptFile.PS1
         shell: pwsh
         env:
-          SN_PASSPHRASE: ${{ secrets.SN_PASSPHRASE }}
-          SN_SALT: ${{ secrets.SN_SALT }}
-          SN_INIT: ${{ secrets.SN_INIT }}
+          SNK_PASSPHRASE: ${{ secrets.SNK_PASSPHRASE }}
+          SNK_SALT: ${{ secrets.SNK_SALT }}
+          SNK_INIT: ${{ secrets.SNK_INIT }}
 
       - name: 📝 Update version
         run: bin/Update-Version.PS1 -Version "$env:VERSION"
